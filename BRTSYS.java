@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+
+/**
+*Main system class for the project 
+*
+*/
 public class BRTSYS{
 
     Scanner scan = new Scanner(System.in);
@@ -11,6 +16,11 @@ public class BRTSYS{
     }
     
 
+    /**
+    *menu function to control easily available menu options upon call
+    *
+    *"report" option will be tested during later iterations of the project
+    */
     public void menu(){
         System.out.println("Select a choice from the following options");
         System.out.println("1. View all buses for today");
@@ -20,6 +30,9 @@ public class BRTSYS{
         //System.out.println("5. Report");
     }
 
+    /**
+    *choice(int i) class created to handle switch statement for user choice
+    */
     public void choice(int i){
         switch(i){
             case 1:
@@ -33,11 +46,18 @@ public class BRTSYS{
         }
     }
 
-    public void loadData(){ //to load information to be able to show to the user
+    
+    /**
+    *loadData() function used to load data to the user upon request
+    */
+    public void loadData(){ 
 
     }
 
-    public void showMap(){ //a function to show the user the map of windsor if that is the selected option
+    /**
+    *showMap() function created to give user access to win_map class
+    */
+    public void showMap(){ 
         m = new win_map();
     }
 
