@@ -33,11 +33,11 @@ public class BRTSYS{
         }
     }
 
-    public void loadData(){
+    public void loadData(){ //to load information to be able to show to the user
 
     }
 
-    public void showMap(){
+    public void showMap(){ //a function to show the user the map of windsor if that is the selected option
         m = new win_map();
     }
 
