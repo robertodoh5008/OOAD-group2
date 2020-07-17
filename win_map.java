@@ -6,7 +6,7 @@ import java.net.*;
 
 /**
  *Class win_map to give user access to the map of Windsor
- * */
+ */
 
 public class win_map {
     URL url;
