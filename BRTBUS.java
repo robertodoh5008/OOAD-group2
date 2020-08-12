@@ -1,54 +1,44 @@
-public class BRTBUS {
+/**
+BRTBUS class to handle a type of vehicle(bus) owned by the agency 
+*/
 
-    private int bus_number;
-    private int capacity;
-    private String driver;
-    private String speed;
+public class BRTBUS extends BRT_VEHICLE_TYPE{
 
-    public BRTBUS(int b_num, int cap, String dri, String sp)
+    private int bus_id;
+    private int driver_id;
+
+
+    public BRTBUS(int bus_id, int capacity, int driver_id, String transit, int fare, String currency)
     {
-        bus_number = b_num;
-        capacity = cap;
-        driver = dri;
-        speed = sp;
+        super(transit, fare, currency, capacity);
+        this.bus_id = bus_id;
+        this.driver_id = driver_id;
     }
 
-    public int getBus_number()
+    public int getBus_id()
     {
-        return bus_number;
+        return this.bus_id;
     }
 
-    public int getCapacity()
+    public int getDriver()
     {
-        return capacity;
+        return this.driver_id;
     }
 
-    public String getDriver()
+    public void setDriver(int driver_id)
     {
-        return driver;
+        this.driver_id = driver_id;
     }
 
-    public String getSpeed()
-    {
-        return speed;
+    @Override
+    public String toString() {
+        return "BRTBUS{" +
+                "bus_id=" + bus_id +
+                ", driver_id=" + driver_id +
+                ", transit='" + transit + '\'' +
+                ", fare=" + fare +
+                ", currency='" + currency + '\'' +
+                ", capacity=" + capacity +
+                '}';
     }
-
-    public void setDriver(String dri_name)
-    {
-        driver = dri_name;
-    }
-
-    public String toString()
-    {
-        String result;
-        result = "Bus Information: "+
-                "\n\t\tBus number : "+bus_number+
-                "\n\t\tCapacity: "+capacity+" seats"+
-                "\n\t\tDriver: "+driver+
-                "\n\t\tSpeed: "+speed;
-        return result;
-    }
-
-
-
 }
