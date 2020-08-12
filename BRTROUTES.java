@@ -1,14 +1,16 @@
-import javax.xml.datatype.DatatypeConstants;
-import java.text.Format;
+/**
+
+*/
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.StringTokenizer;
 
+
 public class BRTROUTES implements ROUTETEMPLATE{
 
 
-    public Map<Integer, Field> routes;
+    public Map<Integer, Handler> routes;
 
     public BRTROUTES(String line)
     {
@@ -16,7 +18,7 @@ public class BRTROUTES implements ROUTETEMPLATE{
         StringTokenizer st = new StringTokenizer(line, Delimiter);
 
         for(int i = 0; i < number_Labels; i++){
-            routes.put(i, new Field(type_Labels[i], labels[i], st.nextToken()));
+            routes.put(i, new Handler(type_Labels[i], labels[i], st.nextToken()));
         }
 
     }
@@ -47,11 +49,11 @@ public class BRTROUTES implements ROUTETEMPLATE{
         return " ";
     }
 
-    private class Field{
+    private class Handler{
         String type;
         String label;
         String value;
-        Field(String type, String label, String value){
+        Handler(String type, String label, String value){
             this.type = type;
             this.label = label;
             this.value = value;
