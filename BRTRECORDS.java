@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class BRTRECORDS implements ROUTETEMPLATE{
+public class BRTRECORDS{
 
     public ROUTELIST route;
 
