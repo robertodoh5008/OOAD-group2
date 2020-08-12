@@ -1,0 +1,4 @@
+fare_id,price,currency_type,payment_method,transfers,transfer_duration
+City,3,CAD,0,,7200
+Tunnel,5,CAD,0,0,
+Tunnel USD,5,USD,0,0,

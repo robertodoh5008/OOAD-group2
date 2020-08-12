@@ -1,0 +1,12 @@
+fare_id,route_id,origin_id,destination_id,contains_id
+City,3277,,,
+City,3278,,,3
+City,3279,,,3
+City,3281,,,
+City,3282,,,
+City,3283,,,
+Tunnel,3285,,3,
+Tunnel USD,3285,3,,
+City,3286,,,3
+City,3287,,,3
+City,3288,,,
